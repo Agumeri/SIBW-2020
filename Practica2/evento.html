@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/96/Dragon_ball.svg">
+    <link rel="shortcut icon" type="image/png" href="img/iconito.png">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="website.js"></script>
+    <title>DBFZ WIKI</title>
+</head>
+<body style="background-color:goldenrod;">
+
+    
+    <header id="primero" >
+        <a href="portada.html"><img src="img/DBFZ.png" id="logo" alt="titulo"></a>
+        <div class="encabezado"><h1><b>DragonBall FighterZ Wiki</b></h1></div>
+        <nav>
+            <a href="https://dbfzworldtour.com/noticias/?lang=es" button class="button">News</a>
+            <a href="https://www.reddit.com/r/dbfz/comments/f92rhs/first_tier_list_for_season_3/" button class="button">Tier List</a>
+            <a href="https://www.youtube.com/watch?v=YXw-vwm9jec" button class="button">Characters</a>
+        </nav>    
+    </header>
+    
+    <aside class="aside1">
+        <div style="padding: 1em 0em 0em 8em"><b><u>ENLACES DE INTERES</u></b></div><br>
+        <ul>
+            <li><b>Kefla, primer personaje de la S3: </b><a href="https://www.youtube.com/watch?v=ldmgA_wrbXo"><img src="img/icon_kefla.png" id="kefla" alt="kefla"></a></li>
+            <li><b>El Padre Shanks, queda 4º en el EVO: </b>  <a href="https://www.youtube.com/watch?v=dYDYNK03uAY"> Ver partida </a> </li>
+            <li><b>Todos los cambios de la S3 </b>  <a href="https://www.eventhubs.com/news/2020/feb/21/dragon-ball-fighterz-season-3-patch-notes/"> aquí </a></li>
+            <li><b>Consulta combos de cada personaje en </b>  <a href="https://findyourtech.gg/"> FindYourTech </a></li>
+            
+        </ul><br><br>   
+        <div style="text-align: center; position: relative;"><b><u>Para mas noticias, no dudes en visitarnos cada día!!!</u></b></div>
+        <img src="img/mtrsi.gif" id="muten_roshi" alt="muten_roshi">
+
+    </aside>
+    
+    <section class="section_evento">
+        
+        <a href="evento_imprimir.html"><img src="img/icono_imprimir.svg" id="ic_impr" alt="icono_imprimir"></a>
+        
+        <div>
+            <img src="img/gku_ssj_dbs.jpg" id="gku_ssj_dbs" alt="ssj_dbs">
+            <div id="origen_foto"><b><i>Goku en la película Dragon Ball Super: Broly</i></b></div>
+        </div>
+
+        <h1 id="nombre">Son Goku Super Saiyan</h1>
+            <h2>Fecha inclusion: 13/09/2017</h2>
+                <p>
+                   El protagonista de la serie. Su participación en el juego no puede faltar.</br>
+                   Desde sus origenes ha sido un luchador nato y se ha unido al plantel para </br> demostrar quien manda.
+                </p>
+                
+                <h3><u>Estilo de combate</u></h3>
+
+                <p>
+                    Goku ssj es el personaje más equilibrado del juego, indicado para los novatos </br> del género. 
+                    Cuenta con bastantes herramientas para zonear, como <b>ráfagas de  </br>ki</b>  o su bien conocida <b>Kamehameha.</b>
+                    Su velocidad es de vértigo, llegando a ser uno </br> de los personajes más veloces del juego. 
+                </p>
+
+                <h3><u>Habilidades especiales</u></h3>
+
+                <p>
+                    Tiene 2 supers de nivel 1: <b>Super Kamehameha y Super Kamehameha Instantaneo</b> (cambiandote este último de lado, es decir, realizando un side switch.). Tiene un único super de nivel 3, el 
+                    <b>Ataque Meteórico</b> el cual se puede lanzar en reacción (frame 1) y al realizarlo se consigue un side switch.  </br></br>
+                </p>
+
+                
+                <!--Boton encargado de desplegar la seccion de comentarios del evento-->
+                <button class="boton_comentarios" onclick="desplegarComentarios()"><b>Comentarios</b></button>
+
+
+                <h4> <u><i> Enlaces relacionados </i></u></h4>
+                <div>
+                    <b>Trailer del personaje: </b><a href="https://www.youtube.com/watch?v=Z73rbpxrVtY">https://www.youtube.com/watch?v=Z73rbpxrVtY</a>
+                </div>
+                <div>
+                    <b>Lista de combos básicos: </b><a href="https://www.youtube.com/watch?v=LMgtBMUxc2Y">https://www.youtube.com/watch?v=LMgtBMUxc2Y</a> 
+                </div>
+                
+                <!--Seccion donde se introducirán todos los comentarios-->
+                <div id="SeccionComentarios" style="padding-left:10%">
+                </div>
+
+                <!--Formulario que se ha de rellenar para poder enviar un mensaje-->
+                <form name="pepe" class="Formulario">
+                    <label for="Nombre" > <b> Nombre:</b></label>
+                    <input type="text" id="user_name" placeholder="asdf"></input>
+
+                    <label for="Email" ><b>E-mail:</b></label>
+                    <input type="text" id="email" placeholder="asdf@gmail.es"></input>
+
+                    <label for="Texto del comentario"></br><b>Texto del comentario: </b></label><br/>
+                    <textarea id="Mensaje"  placeholder="Escriba aqui el mensaje..." oninput="cambiarPalabraAsteriscos()"></textarea><br/>
+
+                    <input type="button" value="Enviar comentario" onclick="validarComentario()">
+                </form>
+               
+        
+    </section>
+
+</body>
+
+    <footer>
+        <p>Comprar DragonBall FighterZ en Instant Gaming 
+            <a href="https://www.instant-gaming.com/es/2141-comprar-key-steam-dragon-ball-fighterz/">https://www.instant-gaming.com/es/2141</a></p>
+        
+        <p>Comprar DragonBall FighterZ en Steam:  <a href="https://store.steampowered.com/app/678950/DRAGON_BALL_FighterZ/"> https://store.steampowered.com/app/678950 </a></p>
+
+        <p>&copy; 2020 - Agustin Merida Gutierrez</p>
+    </footer>
+
+
+</html>
