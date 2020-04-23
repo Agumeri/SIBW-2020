@@ -1,0 +1,107 @@
+{% extends "padre.html" %}
+
+    {% block section %}
+    <section class="section_evento">
+        <table class="galeria">
+            <tr>
+                <td><a href="#img1"><img class="imgal" src={{ imagen["img1"] }} alt="goku ssj"></a></td>
+                <td><a href="#img2"><img class="imgal" src={{ imagen["img2"] }} alt="goku gt"></a></td>
+                <td><a href="#img3"><img class="imgal" src={{ imagen["img3"] }} alt="a21"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#img4"><img class="imgal" src={{ imagen["img4"] }} alt="broly super">      </a></td>
+                <td><a href="#img5"><img class="imgal" src={{ imagen["img5"] }} alt="gogeta super"></a></td>
+                <td><a href="#img6"><img class="imgal" src={{ imagen["img6"] }} alt="gohan">       </a></td>
+            </tr>
+            <tr>
+                <td><a href="#img7"><img class="imgal" src={{ imagen["img7"] }} alt="18"></a></td>
+                <td><a href="#img8"><img class="imgal" src={{ imagen["img8"] }} alt="buu"> </a></td>
+                <td><a href="#img9"><img class="imgal" src={{ imagen["img9"] }} alt="yamcha"> </a></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- PARTE CORRESPONDIENTE A LA VISUALIZACIÓN "DINÁMICA" DE LA GALERÍA-->
+    <div class="modal" id="img1">
+        <div class="img_lightbox">
+            <a href="#img9">&#60;</a>
+            <a href=""><img src={{ imagen["img1"] }} alt="goku ssj"></a>
+            <a href="#img2">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img2">
+        <div class="img_lightbox">
+            <a href="#img1">&#60;</a>
+            <a href=""><img src={{ imagen["img2"] }} alt="goku ssj"></a>
+            <a href="#img3">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img3">
+        <div class="img_lightbox">
+            <a href="#img2">&#60;</a>
+            <a href=""><img src={{ imagen["img3"] }} alt="goku ssj"></a>
+            <a href="#img4">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img4">
+        <div class="img_lightbox">
+            <a href="#img3">&#60;</a>
+            <a href=""><img src={{ imagen["img4"] }} alt="goku ssj"></a>
+            <a href="#img5">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img5">
+        <div class="img_lightbox">
+            <a href="#img4">&#60;</a>
+            <a href=""><img src={{ imagen["img5"] }} alt="goku ssj"></a>
+            <a href="#img6">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img6">
+        <div class="img_lightbox">
+            <a href="#img5">&#60;</a>
+            <a href=""><img src={{ imagen["img6"] }} alt="goku ssj"></a>
+            <a href="#img7">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img7">
+        <div class="img_lightbox">
+            <a href="#img6">&#60;</a>
+            <a href=""><img src={{ imagen["img7"] }} alt="goku ssj"></a>
+            <a href="#img8">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    <div class="modal" id="img8">
+        <div class="img_lightbox">
+            <a href="#img7">&#60;</a>
+            <a href=""><img src={{ imagen["img8"] }} alt="goku ssj"></a>
+            <a href="#img9">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img9">
+        <div class="img_lightbox">
+            <a href="#img8">&#60;</a>
+            <a href=""><img src={{ imagen["img9"] }} alt="goku ssj"></a>
+            <a href="#img1">></a>
+        </div>
+            <a class="cerrar" href="">X</a>
+    </div>
+
+    {% endblock %}
+
