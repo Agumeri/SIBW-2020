@@ -1,0 +1,88 @@
+{% extends "padre.html" %}
+    
+    {% block section %}
+    <section class="section_evento">
+
+        <a href="evento_imprimir.php?ev=1"><img src="img/icono_imprimir.svg" id="ic_impr" alt="icono_imprimir"></a>
+        
+        <div>
+            
+            <img src={{ imagen }} id="gku_ssj_dbs" alt="ssj_dbs">
+            <div id="origen_foto"><b><i>{{ descImg }}</i></b></div>
+        </div>
+
+        <h1 id="nombre">{{ nombre }}</h1>
+            <h2>Fecha inclusion: {{ fecha }}</h2>
+                <p class="p1">
+                   {{ descripcion }}
+                </p>
+                
+                <h3><u>Estilo de combate</u></h3>
+
+                <p class="p1">
+                    {{ estiloCombate }}
+                </p>
+
+                <h3><u>Habilidades especiales</u></h3>
+
+                <p class="parrafos">
+                    {{ habilidades }}
+                </p>
+
+                
+                <!--Boton encargado de desplegar la seccion de comentarios del evento-->
+                <button class="boton_comentarios" onclick="desplegarComentarios()"><b>Comentarios</b></button>
+
+
+                <h4> <u><i> Enlaces relacionados </i></u></h4>
+                <div>
+                    <b>Trailer del personaje: </b><a href={{ trailerPersonaje }}>  {{ trailerPersonaje }}  </a>
+                </div>
+                <div>
+                    <b>Lista de combos básicos: </b><a href= {{ listaCombos }}> {{ listaCombos }} </a> 
+                </div>
+                
+                <!--Seccion donde se introducirán todos los comentarios-->
+                <div id="SeccionComentarios" style="padding-left:10%">
+                    {% for comment in comentarios %}
+                    <hr class="separador"/>
+                    <h3 class=username> {{ comment[0] }} </h3>
+                    <p class="user_comment"> {{ comment[1] }} </p>
+                    <p class="fecha"> {{ comment[2] }} | {{ comment[3] }} </p>
+                    <p name=nComentario class="sneaky_input" value={{ comment[4] }}></p>
+
+                    <form method="post" action="editarComentario.php">
+                        <p class="sneaky_input" name="gest" value={{ datos.gestor }}></p>
+                        <input type="text" class="sneaky_input" name="numComment" value={{ comment[4] }}>
+                        <input class="sneaky_input" type="text"  name="idPersonaje" value={{ idPj }}>
+                        <input type="submit" value="Modificar comentario">
+                    </form>
+                    <form method="post" action="borrarComentario.php">
+                        <input class="sneaky_input" name="gest" value={{ datos.gestor }}>
+                        <input  type="text" class="sneaky_input" name="numComment" value={{ comment[4] }}>
+                        <input class="sneaky_input" type="text"  name="idPersonaje" value={{ idPj }}>
+                        <input type="submit" value="Borrar comentario">
+                    </form>
+                {% endfor %}
+                </div>
+                
+
+                <!--Formulario que se ha de rellenar para poder enviar un mensaje-->
+                <form action="newComment.php" name="pepe" method="post" class="Formulario">
+                    <input class="sneaky_input" type="text"  name="idPersonaje" value={{ idPj }}>
+                    <input class="sneaky_input" type="text"  name="idUsuario" value={{ datos.id }}>
+                    <label for="Nombre" > <b> Nombre:</b></label>
+                    <input name="nombre" type="text" id="user_name" placeholder="Nombre usuario"></input>
+
+                    <label for="Email" ><b>E-mail:</b></label>
+                    <input name="correo" type="text" id="email" placeholder="usuario@gmail.es"></input>
+
+                    <label for="Texto del comentario"></br><b>Texto del comentario: </b></label><br/>
+                    <textarea name="mensaje" id="Mensaje"  placeholder="Escriba aqui el mensaje..." oninput="cambiarPalabraAsteriscos()"></textarea><br/>
+
+                    <input type="submit" value="Enviar comentario">
+                </form>
+
+                <div id="banwords" value="{% for bw in palabras %}{{ bw }} {% endfor %}"></div>
+    </section>
+    {% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/96/Dragon_ball.svg">
+    <link rel="shortcut icon" type="image/png" href="iconito.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_evento_lightbox.css">
+    <script type="text/javascript" src="javascript/website.js"></script>
+    <title>DBFZ WIKI</title>
+</head>
+<body style="background-color:goldenrod;">
+    
+    {% block header %}
+    <header id="primero" >
+        
+        
+        <a href="index.php"><img src="img/DBFZ.png" id="logo" alt="titulo"></a>
+        <div class="encabezado"><h1><b>DragonBall FighterZ Wiki</b></h1></div>
+        
+        <nav>
+            <a href="https://dbfzworldtour.com/noticias/?lang=es" button class="button">News</a>
+            <a href="personajes.php" button class="button">Personajes</a>
+            <a href="galeria.php" button class="button">Galería</a>
+        </nav>   
+        
+    </header>
+    {% endblock %}
+    
+    
+    <aside class="aside1">
+        <div style="padding-left: 30%;"><b><u>ENLACES DE INTERES</u></b></div><br>
+        <ul>
+            <li><b>Kefla, primer personaje de la S3: </b><a href="https://www.youtube.com/watch?v=ldmgA_wrbXo"><img src="img/icon_kefla.png" id="kefla" alt="kefla"></a></li>
+            <li><b>El Padre Shanks, queda 4º en el EVO: </b>  <a href="https://www.youtube.com/watch?v=dYDYNK03uAY"> Ver partida </a> </li>
+            <li><b>Todos los cambios de la S3 </b>  <a href="https://www.eventhubs.com/news/2020/feb/21/dragon-ball-fighterz-season-3-patch-notes/"> aquí </a></li>
+            <li><b>Consulta combos de cada personaje en </b>  <a href="https://findyourtech.gg/"> FindYourTech </a></li>
+        </ul><br><br>   
+        <div style="text-align: center; position: relative;"><b><u>Para mas noticias, no dudes en visitarnos cada día!!!</u></b></div>
+        <img src="img/mtrsi.gif" id="muten_roshi" alt="muten_roshi">
+
+    </aside>
+    
+    {% block section %}
+        <section id="section">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic impedit fugiat harum iusto magni laboriosam doloremque, tempore fugit error sunt voluptatem dignissimos, officia distinctio perspiciatis assumenda quos quis atque ipsa!</p>
+        </section>
+    {% endblock %}
+    
+    <footer>
+        <p>Comprar DragonBall FighterZ en Instant Gaming: 
+            <a href="https://www.instant-gaming.com/es/2141-comprar-key-steam-dragon-ball-fighterz/">https://www.instant-gaming.com/es/2141</a></p>
+        
+        <p>Comprar DragonBall FighterZ en Steam:  <a href="https://store.steampowered.com/app/678950/DRAGON_BALL_FighterZ/"> https://store.steampowered.com/app/678950 </a></p>
+
+        <p>&copy; 2020 - Agustin Merida Gutierrez</p>
+    </footer>
+
+</body>
+</html>

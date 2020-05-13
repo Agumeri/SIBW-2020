@@ -1,0 +1,79 @@
+{% extends "padre.html" %}
+
+{% block header %}
+<header id="primero">
+
+    {% if not user %}
+        <a href="login.php" id="login" button class="button_log">Logueate</a>
+        <a href="signup.php">REGISTRATE</a>
+    {% else %}
+        <p id=cajita>
+            Bienvenido fighterz <strong>{{ user.nick }}</strong>
+        </p>
+        <div>
+            <a href="logout.php" id="logout" button class = "button_log">Salir</a>
+        </div>
+        
+    
+
+    {% endif %}
+        
+    
+    <a href="index.php"><img src="img/DBFZ.png" id="logo" alt="titulo"></a>
+    <div class="encabezado"><h1><b>DragonBall FighterZ Wiki</b></h1></div>
+
+    <nav>
+        <a href="https://dbfzworldtour.com/noticias/?lang=es" button class="button">News</a>
+        <a href="personajes.php" button class="button">Personajes</a>
+        <a href="galeria.php" button class="button">Galería</a>
+        {% if user %}
+        <a href="perfil.php" button class="button">Perfil</a>
+        {% endif %}
+    </nav>
+</header>   
+{% endblock %}
+
+
+
+{% block section %}
+    <section id="section">
+        <table id="tabla_contenido">
+            <h1 style="text-align: center; font-size:xx-large;"><b><u>Personajes más populares</u></b></h1> 
+            <tr>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=1"><img src="img/gku_ssj.png" id="c1" alt="gku_ssj"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=2"><img src="img/gku_gt.png" id="c2" alt="gku_gt"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=3"><img src="img/a21.png" id="c3" style="width: 48%;" alt="a21"></a>
+                </td>
+            </tr>
+
+            <tr >
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=4"><img src="img/broly_dbs.png" id="c1" alt="broly_dbs"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=5"><img src="img/gogeta.png" id="c2" alt="gogeta"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=6"><img src="img/tohan.png" id="c3" alt="tohan"></a>
+                </td>
+            </tr>
+
+            <tr id="tab">
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=7"><img src="img/a18.png" id="c1"  alt="a18"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=8"><img src="img/kbuu.png" id="c2" alt="kbuu"></a>
+                </td>
+                <td id="tab">
+                    <a href="plantillaEvento.php?ev=9"><img src="img/yamcha.png" id="c3" style="width: 60%"  alt="yamcha"></a>
+                </td>
+            </tr>
+        </table>
+    </section>
+{% endblock %}

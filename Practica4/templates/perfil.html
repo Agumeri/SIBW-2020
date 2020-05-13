@@ -1,0 +1,13 @@
+{% extends "padre.html" %}
+
+{% block section %}
+<section id="section">
+    <h1 style="text-align: center; font-size:xx-large;"><b><u>Datos del usuario</u></b></h1> 
+    <div>
+        <br><br><p>Username: {{ user.nick }}</p><br>
+        <p>Email: {{user.email}}</p>
+    </div>
+</section>
+
+
+{% endblock %}
