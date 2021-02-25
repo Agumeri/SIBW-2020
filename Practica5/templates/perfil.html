@@ -1,0 +1,60 @@
+{% extends "padre.html" %}
+
+{% block section %}
+<section id="section">
+    <h1 style="text-align: center; font-size:xx-large;"><b><u>Datos del usuario</u></b></h1> 
+    <div>
+        <br><br><p>Username: {{ user.nick }}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Permisos de moderado: 
+            {% if user.mod == 1 %}
+                Si.
+            {% else %}
+                No.
+            {% endif %} 
+        </p>
+        <p>Permisos de gestor: 
+            {% if user.gestor == 1 %}
+                Si.
+            {% else %}
+                No.
+            {% endif %} 
+        </p>
+        <p>Permisos de superusuario: 
+            {% if user.super == 1 %}
+                Si.
+            {% else %}
+                No.
+            {% endif %} 
+        </p>
+    </div><br><br>
+
+    <h1>Modificar datos usuario: </h1>
+    <form action="modificarDatos.php" method="POST">
+        <input class="sneaky_input" name="id" value={{ user.id }} type="text">
+        <label for="nombre">Nuevo nombre de usuario</label>
+        <input name="newName" type="text"><br>
+
+        <label for="correo">Nuevo correo electronico</label>
+        <input name="newEmail" type="text"><br>
+
+        <input type="submit" value="Cambiar datos">
+    </form>
+
+    <h1>Cambiar contraseña</h1>
+    <form action="cambiarContraseña.php" method="POST">
+        <input class="sneaky_input" name="id" value={{ user.id }} type="text">
+        <label for="password">New Password</label>
+        <input name="contraseña" type="password" placeholder="Enter Password"> <br>
+    
+        <label for="pass_confirm">New Confirm password</label>
+        <input name="password_confirm" type="password" placeholder="Enter Password Again"><br>
+
+        <input type="submit" value="Cambiar contraseña">
+    </form>
+
+    
+</section>
+
+
+{% endblock %}

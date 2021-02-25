@@ -1,0 +1,33 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section">
+        <h1 style="text-align: center; font-size:xx-large;"><b><u>Personajes del plantel</u></b></h1>
+    
+        {% for personaje in datos %}
+            <p style="margin-left: 80px">
+                
+                {% if personaje[2] == 1 %}
+                <a href="plantillaEvento.php?ev={{ personaje[0] }}"> {{ personaje[1] }} </a>
+                {% endif %}
+                
+                {% if permisos.gestor == 1%}
+                {% if personaje[2] == 0%}
+                <a href="plantillaEvento.php?ev={{ personaje[0] }}"> {{ personaje[1] }} </a>
+                <form action="publicar.php" method="POST">
+                    <input type="text" class="sneaky_input" name="idpj" value={{ personaje[0] }}>
+                    <label for="pnp">Personaje no publicado.</label>
+                    <input type="submit" value="¿Publicar?">
+                </form>
+                {% else %}
+                Personaje publicado. 
+                {% endif %} 
+                {% endif %}
+
+
+            </p>
+        {% endfor %}
+
+        
+    </section>
+{% endblock %}

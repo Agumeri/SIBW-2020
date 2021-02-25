@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section-login" style="min-height: 75vh;">
+
+        <!-- Parte correspondiente al login de un usuario -->
+        <div class="login-box" style="margin-left:50%; min-height: 55%;">
+            <img src="img/iconito.png" class="avatar" alt="Avatar Image">
+            <h1>Sign up Here</h1>
+            <form action="signup.php" method="post">
+                <label for="username">Username</label>
+                <input name="nick" type="text" placeholder="Enter Username">
+
+                <label for="email">Email</label>
+                <input name="email" type="text" placeholder="Enter email">
+
+                <label for="password">Password</label>
+                <input name="contraseña" type="password" placeholder="Enter Password">
+
+                <label for="pass_confirm">Confirm password</label>
+                <input name="password_confirm" type="password" placeholder="Enter Password Again">
+
+                <input type="submit"  value="Sign Up" onclick="">
+            </form>
+        </div>
+    </section>
+{% endblock %}

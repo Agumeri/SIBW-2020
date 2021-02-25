@@ -1,0 +1,47 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section">
+        <form action="modificarEvento.php" method="POST" enctype="multipart/form-data">
+        
+            <h1 >
+                Nombre Personaje <input name="nombre" value={{ nombre }} type="text">
+            </h1>
+            
+            <h2>Fecha inclusion: <input name="fecha" value={{ fecha }} type="text"></h2>
+                <p>
+                   Descripcion: <input name="desc" value="{{ descripcion }}" type="text">
+                </p>
+                
+                <h3><u>Estilo de combate</u></h3>
+
+                <p>                                                      
+                    <input name="estilo" value="{{ estiloCombate }}" type="text">
+                </p>
+
+                <h3><u>Habilidades especiales</u></h3>
+
+                <p>
+                    <input name="habilidades" value="{{ habilidades }}" type="text">
+                </p>
+
+                <h4> <u><i> Enlaces relacionados </i></u></h4>
+                <div>
+                    <b>Trailer del personaje: </b>
+                    <input name="trailer" value={{ trailerPersonaje }} type="text"> 
+                </div>
+                <div>
+                    <b>Lista de combos básicos: </b>
+                    <input name="listaCombos" type="text" value={{ listaCombos }} > 
+                </div><br>
+
+                <label  for="imagen">Imagen</label>
+                <input name="fichero" type="file"><br>
+
+                <label for="descImagen">Descripcion imagen</label>
+                <input name="descImagen" value={{ descImg }} type="text"><br><br><br>
+
+                <input type="submit" value="Realizar cambios">
+        </form>
+    </section>
+{% endblock %}

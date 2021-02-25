@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section">
+        <form action="buscar.php" method="POST">
+            <h1>
+                <label for="caja_busqueda">Buscar: </label>
+                <input type="text" name="search" id="searchbox" onkeyup="hacerPeticionAjax(this.value)"/>
+            </h1>
+            <div id="busqueda">
+                <p></p>
+            </div>
+        </form>
+    
+        
+    </section>
+{% endblock %}

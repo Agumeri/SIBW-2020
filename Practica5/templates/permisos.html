@@ -1,0 +1,49 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section">
+        <h1 style="text-align: center; font-size:xx-large;"><b><u>Usuarios de la web:</u></b></h1>
+        
+        {% for usuario in usuarios %}
+            <div style="margin-left: 300px">
+                Nombre: {{ usuario[1] }}    |   
+                Moderador: 
+                {% if usuario[2] == 1 %}
+                    Si.
+                {% else %}
+                    No.
+                {% endif %} |
+                Gestor:     
+                {% if usuario[3] == 1 %}
+                    Si.
+                {% else %}
+                    No.
+                {% endif %} |
+                Superusuario: 
+                {% if usuario[4] == 1 %}
+                    Si.
+                {% else %}
+                    No.
+                {% endif %}
+            </div><br>
+        {% endfor %}
+        
+        <h1 style="text-align: center; font-size:xx-large;"><b><u>Modificar permisos:</u></b></h1>
+        <form action="permisos.php" method="post">
+            <label for="nombreUser" style="margin-left: 450px">Nombre del usuario</label>
+            <input name="username" type="text"><br>
+
+            <label for="moderador" style="margin-left: 450px">Permisos Moderador? (S/N)</label>
+            <input name="pMod" type="text"><br>
+
+            <label for="moderador" style="margin-left: 450px">Permisos Gestor? (S/N)</label>
+            <input name="pGest" type="text"><br>
+
+            <label for="moderador" style="margin-left: 450px">Permisos Superusuario? (S/N)</label>
+            <input name="pSuper" type="text"><br>
+
+            <input type="submit" value="Cambiar permisos" style="margin-left: 450px">
+        </form>
+
+    </section>
+{% endblock %}

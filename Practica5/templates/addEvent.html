@@ -1,0 +1,42 @@
+{% extends "padre.html" %}
+
+{% block section %}
+    <section id="section" style="min-height: 60vh;">
+        <form action="newEvent.php" method="post" enctype="multipart/form-data">
+            <input class="sneaky_input" name="gest" value={{ datos.gestor }}>
+
+            <label for="nombrePersonaje">Nombre del personaje</label>
+            <input name="charName" type="text"><br>
+
+            <label for="fechaInclusion">Fecha inclusion</label>
+            <input name="fecha" type="text"><br>
+
+            <label  for="Descripcion">Descripcion</label>
+            <input name="desc" type="desc"><br>
+
+            <label for="EstCombate">Estilo de combate</label>
+            <input name="estilo" type="text"><br>
+            
+            <label  for="Habilidades">Habilidades</label>
+            <input name="habilidades" type="text"><br>
+
+            <label  for="TrailerPersonaje">Trailer del personaje</label>
+            <input name="trailer" type="text"><br>
+
+            <label  for="listacombos">Lista de combos</label>
+            <input name="listaCombos" type="text"><br>
+
+            <label  for="imagen">Imagen</label>
+            <input name="fichero_usuario" type="file"><br>
+
+            <label for="descImagen">Descripcion imagen</label>
+            <input name="descImagen" type="text"><br><br>
+
+            <p>A contintuación, introduzca la etiqueta asociada al personaje, elgiendo entre: Protagonista, secundario, terciario o antangonista</p>
+            <label for="etiqueta">Etiqueta</label>
+            <input name="etiq" type="text"><br><br><br>
+
+            <input type="submit" value="Añadir personaje">
+        </form>
+    </section>
+{% endblock %}
